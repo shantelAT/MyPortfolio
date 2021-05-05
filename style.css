@@ -121,7 +121,7 @@ section .title::after{
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: #fa7a4a!important;
+    color: black !important;
 }
 .navbar.sticky .menu li a:hover{
     color: black;
