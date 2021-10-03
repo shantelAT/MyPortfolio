@@ -34,10 +34,11 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .projects, .skills, .teams, .contact, footer{
+.about, .abouttwo, .projects, .skills, .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
+.abouttwo .abouttwo-content,
 .projects .serv-content,
 .skills .skills-content,
 .contact .contact-content{
@@ -51,8 +52,8 @@ section .title{
     text-align: center;
     font-size: 40px;
     font-weight: 500;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -109,22 +110,14 @@ section .title::after{
 .navbar.sticky .logo a span{
     color: black;
 }
-/*
-.navbar .menu li{
-    list-style: none;
-    display: inline-block;
-}
+
 .navbar .menu li a{
-    display: inline-block;
-    background: #FA7A4A !important;
-    color: black !important;
-    font-size: 20px;
-    padding: 12px 36px;
-    margin-top: 20px;
-    font-weight: 400;
-    border-radius: 6px;
-    border: 2px solid #FA7A4A;
-    transition: all 0.3s ease;
+    display: block;
+    color: red;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
     color: black !important;
@@ -258,12 +251,58 @@ section .title::after{
     font-size: 20px;
     font-weight: 500;
     padding: 10px ;
-    margin-top: 20px;
+    margin-top: 5px;
     border-radius: 6px;
     border: 2px solid #BCADD6;
     transition: all 0.3s ease;
 }
 .about .about-content .right a:hover{
+    color: #BCADD6;
+    background: none;
+}
+
+/****** Second App ********/
+
+.abouttwo .title::after{
+    content: "";
+}
+.abouttwo .abouttwo-content .left{
+    width: 50%;
+}
+.abouttwo .abouttwo-content .left img{
+    height: 650px;
+    width: 650px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.abouttwo .abouttwo-content .right{
+    width: 35%;
+}
+.abouttwo .abouttwo-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.abouttwo .abouttwo-content .right .text span{
+    color: #FA7A4A;
+}
+.abouttwo .abouttwo-content .right p{
+    text-align: justify;
+}
+.abouttwo .abouttwo-content .right a{
+    display: inline-block;
+    background: #BCADD6;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px ;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 2px solid #BCADD6;
+    transition: all 0.3s ease;
+}
+.abouttwo .abouttwo-content .right a:hover{
     color: #BCADD6;
     background: none;
 }
@@ -578,7 +617,12 @@ footer span a:hover{
         width: 200px;
     }
 }
-
+@media (max-width: 1004px) {
+    .abouttwo .abouttwo-content .left img{
+        height: 200px;
+        width: 200px;
+    }
+}
 @media (max-width: 991px) {
     .max-width{
         padding: 0 50px;
@@ -610,9 +654,8 @@ footer span a:hover{
         display: block;
     }
     .navbar .menu li a{
-        display: inline-block;
+        display: inline-block !important;
         margin: 20px 0;
-        font-size: 25px;
     }
     .home .home-content .text-2{
         font-size: 50px;
@@ -627,6 +670,7 @@ footer span a:hover{
     .max-width{
         max-width: 930px;
     }
+    /*
     .about .about-content .column{
         width: 100%;
     }
@@ -637,7 +681,7 @@ footer span a:hover{
     }
     .about .about-content .right{
         flex: 100%;
-    }
+    }*/
     .projects .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
@@ -675,6 +719,7 @@ footer span a:hover{
         font-size: 27px;
     }
     .about .about-content .right .text,
+    .abouttwo .abouttwo-content .right .text,
     .skills .skills-content .left .text{
         font-size: 19px;
     }
